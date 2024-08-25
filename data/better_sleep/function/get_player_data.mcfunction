@@ -11,7 +11,7 @@ execute as @a[scores={no_sleep=2..}] run scoreboard players reset @s no_sleep
 
 # Store Sleep Ping Data
 scoreboard players enable @a sleep_ping
-execute as @a[scores={no_sleep=2..}] run scoreboard players reset @s sleep_ping
+execute as @a[scores={sleep_ping=2..}] run scoreboard players reset @s sleep_ping
 
 # Store Sleeptimer NBT data in scoreboard
 execute as @a store result score @s better_sleep.sleeptimer run data get entity @s SleepTimer 1
