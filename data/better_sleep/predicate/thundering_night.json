@@ -1,0 +1,13 @@
+[
+	{
+		"condition": "minecraft:time_check",
+		"value": {
+			"min": 12010,
+			"max": 12030
+		}
+	},
+	{
+		"condition": "minecraft:weather_check",
+		"thundering": true
+	}
+]
