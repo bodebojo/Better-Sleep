@@ -3,22 +3,54 @@
         "icon": {
             "id": "minecraft:red_bed"
         },
-        "title": "Better Sleep",
+        "title": {
+            "translate": "advancements.better_sleep.root.title",
+            "fallback": "Better Sleep"
+        },
         "frame": "goal",
         "description": [
             {
-                "text": "Better Sleep",
-                "color": "gold"
+                "text": "Version",
+                "extra": [
+                    " ",
+                    {
+                        "text": "1.0.2",
+                        "color": "red"
+                    }
+                ],
+                "color": "dark_gray"
+            },
+            "\n\n",
+            {
+                "translate": "advancements.better_sleep.root.description",
+                "fallback": "Improves Minecraft's sleeping experience!",
+                "color": "gray"
+            },
+            "\n\n",
+            {
+                "text": "By",
+                "extra": [
+                    " ",
+                    {
+                        "text": "Bodebojo",
+                        "color": "red"
+                    }
+                ],
+                "color": "dark_gray"
             }
         ],
-        "background": "minecraft:textures/block/deepslate.png",
         "show_toast": false,
         "announce_to_chat": false
     },
     "criteria": {
-        "tick": {
+        "install the better_sleep datapack": {
             "trigger": "minecraft:tick"
         }
     },
-    "parent": "bodebojo:root"
+    "parent": "bojos_api:root",
+    "requirements": [
+        [
+            "install the better_sleep datapack"
+        ]
+    ]
 }
