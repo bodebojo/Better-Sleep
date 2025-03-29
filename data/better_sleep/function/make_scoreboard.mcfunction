@@ -2,10 +2,10 @@
 scoreboard objectives add better_sleep.numbers dummy
 
 # Trigger to set a No Sleep status
-scoreboard objectives add no_sleep trigger
+scoreboard objectives add better_sleep.no_sleep trigger
 
 # Trigger to get pinged when sleepy time
-scoreboard objectives add sleep_ping trigger
+scoreboard objectives add better_sleep.sleep_ping trigger
 
 # Add scoreboard to track if, and how long a player has been sleeping 
 scoreboard objectives add better_sleep.sleeptimer dummy
