@@ -30,13 +30,13 @@
         "announce_to_chat": false
     },
     "criteria": {
-        "Install any datapack made by Bodebojo": {
+        "install_any_datapack_made_by_bodebojo": {
             "trigger": "minecraft:tick"
         }
     },
     "requirements": [
         [
-            "Install any datapack made by Bodebojo"
+            "install_any_datapack_made_by_bodebojo"
         ]
     ]
 }

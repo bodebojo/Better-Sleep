@@ -1,11 +1,11 @@
 {
     "pack": {
-        "pack_format": 71,
+        "pack_format": 61,
         "supported_formats": {
             "min_inclusive": 48,
-            "max_inclusive": 71
+            "max_inclusive": 61
         },
-        "description": "Better Sleep"
+        "description": "Improves Minecraft's sleeping experience!"
     },
     "overlays": {
         "entries": [

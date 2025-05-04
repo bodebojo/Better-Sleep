@@ -1,2 +1,0 @@
-
-tick rate 20

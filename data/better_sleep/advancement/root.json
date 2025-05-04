@@ -1,7 +1,7 @@
 {
     "display": {
         "icon": {
-            "id": "minecraft:red_bed"
+            "id": "minecraft:white_bed"
         },
         "title": {
             "translate": "advancements.better_sleep.root.title",
@@ -14,7 +14,7 @@
                 "extra": [
                     " ",
                     {
-                        "text": "1.1.0",
+                        "text": "2.0.0",
                         "color": "red"
                     }
                 ],
@@ -43,14 +43,14 @@
         "announce_to_chat": false
     },
     "criteria": {
-        "install the better_sleep datapack": {
+        "install_the_better_sleep_datapack": {
             "trigger": "minecraft:tick"
         }
     },
     "parent": "bojos_api:root",
     "requirements": [
         [
-            "install the better_sleep datapack"
+            "install_the_better_sleep_datapack"
         ]
     ]
 }
