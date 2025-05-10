@@ -4,3 +4,6 @@ scoreboard objectives add better_sleep.sleeptimer dummy
 
 scoreboard objectives add better_sleep.sleep_notifier trigger
 scoreboard objectives add better_sleep.no_sleep trigger
+
+scoreboard objectives add better_sleep.sleep_notifier_old dummy
+scoreboard objectives add better_sleep.no_sleep_old dummy
