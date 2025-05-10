@@ -1,0 +1,45 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:barrier"
+        },
+        "title": {
+			"translate": "advancements.better_sleep.no_sleep.title",
+			"fallback": "No SLeep"
+		},
+        "frame": "challenge",
+        "description": [
+            {
+                "translate": "advancements.better_sleep.no_sleep.description1",
+                "fallback": "Run",
+                "color": "gray"
+            },
+            " ",
+            {
+                "translate": "advancements.better_sleep.no_sleep.description2",
+                "fallback": "/trigger better_sleep.no_sleep",
+                "color": "red",
+                "bold": true
+            },
+            " ",
+            {
+                "translate": "advancements.better_sleep.no_sleep.description3",
+                "fallback": "To notify other people sleeping  that you don't want them to sleep!",
+                "color": "gray"
+            }
+        ],
+        "show_toast": false,
+        "announce_to_chat": false
+    },
+    "criteria": {
+        "install_the_better_sleep_datapack": {
+            "trigger": "minecraft:tick"
+        }
+    },
+    "parent": "better_sleep:root",
+    "requirements": [
+        [
+            "install_the_better_sleep_datapack"
+        ]
+    ]
+}
