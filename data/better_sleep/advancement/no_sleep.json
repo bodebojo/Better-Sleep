@@ -7,7 +7,7 @@
 			"translate": "advancements.better_sleep.no_sleep.title",
 			"fallback": "No SLeep"
 		},
-        "frame": "challenge",
+        "frame": "task",
         "description": [
             {
                 "translate": "advancements.better_sleep.no_sleep.description1",
