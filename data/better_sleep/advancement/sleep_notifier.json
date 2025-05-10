@@ -1,0 +1,45 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:clock"
+        },
+        "title": {
+			"translate": "advancements.better_sleep.sleep_notifier.title",
+			"fallback": "Sleep Notifier"
+		},
+        "frame": "task",
+        "description": [
+            {
+                "translate": "advancements.better_sleep.sleep_notifier.description1",
+                "fallback": "Run",
+                "color": "gray"
+            },
+            " ",
+            {
+                "translate": "advancements.better_sleep.sleep_notifier.description2",
+                "fallback": "/trigger better_sleep.sleep_notifier",
+                "color": "red",
+                "bold": true
+            },
+            " ",
+            {
+                "translate": "advancements.better_sleep.sleep_notifier.description3",
+                "fallback": "To get notified when its time to sleep!",
+                "color": "gray"
+            }
+        ],
+        "show_toast": false,
+        "announce_to_chat": false
+    },
+    "criteria": {
+        "install_the_better_sleep_datapack": {
+            "trigger": "minecraft:tick"
+        }
+    },
+    "parent": "better_sleep:root",
+    "requirements": [
+        [
+            "install_the_better_sleep_datapack"
+        ]
+    ]
+}

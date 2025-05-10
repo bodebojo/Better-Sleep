@@ -1,11 +1,11 @@
-# Make scoreboards
-function better_sleep:make_scoreboard
+# Create Scoreboards
+function better_sleep:setup/scoreboards
 
-# Start loop to gather player information
-function better_sleep:get_player_data
+# Set Default Values
+function better_sleep:setup/default_scores
 
-# Start loop to send sleep pings
-function better_sleep:sleep_ping
+# Start second loop
+function better_sleep:tick/loop_1s
 
-# disable gamerule
-gamerule playersSleepingPercentage 101
+# Start tick loop
+function better_sleep:tick/loop_1t
