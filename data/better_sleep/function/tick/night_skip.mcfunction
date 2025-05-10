@@ -1,1 +1,1 @@
-execute if predicate better_sleep:night if entity @a[scores={better_sleep.sleeptimer=1..100}] run time add 6s
+execute if predicate better_sleep:night if entity @a[scores={better_sleep.sleeptimer=20..100}] run time add 6s
