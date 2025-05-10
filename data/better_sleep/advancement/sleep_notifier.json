@@ -24,7 +24,7 @@
             " ",
             {
                 "translate": "advancements.better_sleep.sleep_notifier.description3",
-                "fallback": "To get notified when its time to sleep!",
+                "fallback": "to get notified when its time to sleep!",
                 "color": "gray"
             }
         ],

@@ -24,7 +24,7 @@
             " ",
             {
                 "translate": "advancements.better_sleep.no_sleep.description3",
-                "fallback": "To notify other people sleeping  that you don't want them to sleep!",
+                "fallback": "to notify other people sleeping  that you don't want them to sleep!",
                 "color": "gray"
             }
         ],
