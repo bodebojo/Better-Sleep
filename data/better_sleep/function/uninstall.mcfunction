@@ -5,4 +5,4 @@ schedule clear test:tick/loop_1s
 scoreboard objectives remove better_sleep.values
 
 # little test message
-say Uninstalled Better Sleep V2
+say Uninstalled Better Sleep
