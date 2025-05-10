@@ -8,6 +8,7 @@
 	},
 	{
 		"condition": "minecraft:weather_check",
-		"thundering": true
+		"thundering": true,
+		"raining": false
 	}
 ]
