@@ -12,7 +12,7 @@ tellraw @s ""
 tellraw @s ""
 # Actual Config:
 # Divider Line
-tellraw @s [{"color": "dark_gray", "text": "================="}, {"color": "dark_green", "text": " Better Sleep ", "clickEvent": {"action": "open_url", "value": "https://modrinth.com/project/better-sleep"}}, {"color": "dark_gray", "text": "================="}]
+tellraw @s [{"color": "dark_gray", "text": "================="}, {"color": "dark_green", "text": " Better Sleep ", "clickEvent": {"action": "open_url", "value": "https://modrinth.com/project/better-sleep"}}, {"color": "dark_gray", "text": "=================="}]
 tellraw @s [{"text":""},{"text":"EXAMPLE Configurable Variable","color":"dark_aqua"},{"text":" <","color":"dark_gray","clickEvent":{"action":"run_command","value":"/function better_sleep:config/example_configurable_variable/decrease"},"hoverEvent":{"action":"show_text","contents":[{"text":"Decrease by one","color":"gray"}]}},{"score":{"name":"&variable_name","objective":"better_sleep.values"},"color":"dark_green","hoverEvent":{"action":"show_text","contents":[{"text":"EXAMPLE Informational Hover Text","color":"gray"}]}},{"text":"> ","color":"dark_gray","clickEvent":{"action":"run_command","value":"/function better_sleep:config/example_configurable_variable/increase"},"hoverEvent":{"action":"show_text","contents":[{"text":"Increase by one","color":"gray"}]}},{"text":"[","color":"dark_gray"},{"text":"🔄","color":"gray","clickEvent":{"action":"run_command","value":"/function better_sleep:config/example_configurable_variable/reset"},"hoverEvent":{"action":"show_text","contents":[{"text":"Reset back to default value","color":"gray"}]}},{"text":"]","color":"dark_gray"}]
 # EXAMPLE Configurable Boolean
 # Value is currently False
