@@ -7,6 +7,9 @@ assignees: bodebojo
 
 ---
 
+**Version**
+Modloader + Minecraft Version + Datapack Version
+
 **Describe the bug**
 A clear and concise description of what the bug is.
 
