@@ -1,0 +1,46 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - v*
+
+permissions: {}
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # for creating the release
+
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Create release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ github.ref_name }}
+        run: gh release create "${tag}"
+
+      - name: Package datapack
+        env:
+          tag: ${{ github.ref_name }}
+        run: |
+          mkdir assets
+          version="${tag#v}"
+          filename="Better Sleep $version.zip"
+          cd assets
+          zip "$filename" *
+
+      - name: Upload assets
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ github.ref_name }}
+        run: gh release upload "$tag" assets/*
