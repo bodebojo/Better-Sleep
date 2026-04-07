@@ -36,8 +36,7 @@ jobs:
           mkdir assets
           version="${tag#v}"
           filename="Better Sleep $version.zip"
-          cd assets
-          zip "$filename" *
+          zip "assets/$filename" *
 
       - name: Upload assets
         env:
