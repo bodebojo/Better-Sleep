@@ -35,7 +35,7 @@ jobs:
         run: |
           mkdir assets
           version="${tag#v}"
-          filename="Better-Sleep-$version.zip"
+          filename="${{ github.event.repository.name }}-$version.zip"
           zip "assets/$filename" *
 
       - name: Upload assets
@@ -43,3 +43,27 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{ github.ref_name }}
         run: gh release upload "$tag" assets/*
+
+      - name: Calculate game versions
+        run:
+          min_major=$(jq '.pack.min_format[0]' pack.mcmeta)
+          min_minor=$(jq '.pack.min_format[1]' pack.mcmeta)
+          max_major=$(jq '.pack.max_format[0]' pack.mcmeta)
+          max_minor=$(jq '.pack.max_format[1]' pack.mcmeta)
+
+          versions=$(curl https://raw.githubusercontent.com/misode/mcmeta/refs/heads/summary/versions/data.json | jq ".[] | select(
+            ([.data_pack_version, .data_pack_version_minor] >= [$min_major, $min_minor]) and
+            ([.data_pack_version, .data_pack_version_minor] <= [$max_major, $max_minor])
+          ) | .id" -r)
+          
+          echo "game_versions=$(echo $versions | jq -R -s -c 'split("\n"[:-1])')" >> "$GITHUB_OUTPUT"
+
+      - name: Upload to modrinth
+        uses: cloudnode-pro/modrinth-publish@v2
+        with:
+          token: ${{ secrets.MODRINTH_TOKEN }}
+          project: C7yTiELM
+          version: ${{ github.ref_name }}
+          loaders: datapack
+          game-versions: ${{ steps.game_versions.outputs.game_versions }}
+          files: assets/*
